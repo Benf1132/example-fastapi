@@ -37,8 +37,7 @@ class PostOut(BaseModel):
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
-
-
+    phone_number: Optional[str] = None
 
 class UserLogin(BaseModel):
     email: EmailStr
@@ -50,7 +49,7 @@ class Token(BaseModel):
 
 
 class TokenData(BaseModel):
-    id: Optional[str]
+    id: Optional[int]
 
 class Vote(BaseModel):
     post_id: int
